@@ -25,6 +25,25 @@ function movedown ()
 redball.top= redball.top + 10
 }
 
+function moveupperleft ()
+{
+redball.left=redball.left - 9, redball.top=redball.top - 3
+}
+
+function moveupperright ()
+{
+redball.left=redball.left + 9, redball.top=redball.top - 3
+}
+function movelowerright ()
+{
+redball.left=redball.left + 10, redball.top=redball.top + 32/97
+}
+
+function movelowerleft ()
+{
+redball.left=redball.left - 19.12, redball.top=redball.top + .353
+}
+
 function movesquare ()
 {
 moveleft ();
@@ -57,6 +76,219 @@ movedown ();
 movedown ();
 }
 
+function movetriangle ()
+{
+movetop ();
+moveright ();
+movetop ();
+moveright ();
+movetop ();
+moveright ();
+movedown ();
+moveright ();
+movedown ();
+moveright ();
+movedown ();
+moveright ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+}
+
+function movediamond ()
+{
+movetop ();
+moveright ();
+movetop ();
+moveright ();
+movetop ();
+moveright ();
+movedown ();
+moveright ();
+movedown ();
+moveright ();
+movedown ();
+moveright ();
+movedown ();
+moveleft ();
+movedown ();
+moveleft ();
+movedown ();
+moveleft ();
+movetop ();
+moveleft ();
+movetop ();
+moveleft ();
+movetop ();
+moveleft ();
+}
+
+function movethreewalls ()
+{
+moveupperleft ();
+moveupperleft ();
+moveupperleft ();
+moveupperleft ();
+moveupperleft ();
+moveupperleft ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ();
+moveupperright ()
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerright ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+movelowerleft ();
+
+}
+
 </script>
 </head>
 <body>
@@ -67,6 +299,10 @@ movedown ();
 <button onclick="moveleft();">moveleft </button>
 <button onclick="movedown();">movedown </button>
 <button onclick="movesquare();">movesquare </button>
-
+<button onclick="movediamond ();">movediamond </button>
+<button onclick="movetriangle ();">movetriangle </button>
+<button onclick="movethreewalls ();">movethreewalls </button>
 </body>
 </html>
+
+<!---BUTTON --> FUNCTION --> FUNCTION --->
