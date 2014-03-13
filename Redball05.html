@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+			<style>
+			.ball {
+			position:absolute;
+			left:200px;
+			}
+			</style>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+			</script>
+			<script>
+			function Ball (cssid)
+			{
+				this.moveright=function ()
+				{
+					var position=$(cssid).offset();
+					console.log("left "+position.left);
+					console.log("top "+position.top);
+					position.left=position.left+20;
+					$(cssid).offset(position);
+				}
+				this.movedown=function ()
+				{
+				var position=$(cssid).offset();
+					console.log("top "+position.top);
+					position.top=position.left+20;
+					$(cssid).offset(position);	
+				}
+				this.moveup=function ()
+				{
+				var position=$(cssid).offset();
+					console.log("top "+position.top);
+					position.top=position.top-20;
+					$(cssid).offset(position);	
+				}
+				this.moveleft=function()
+				{
+				var position=$(cssid).offset();
+					console.log("left "+position.left);
+					position.left=position.left-20;
+					$(cssid).offset(position);	
+				}								
+				this.moveupleft=function()
+				{
+				var position=$(cssid).offset();
+					console.log("left "+position.left);
+					console.log("top "+position.top);
+					position.left=position.left-20;
+					position.top=position.top-20;
+					$(cssid).offset(position);
+				}
+				this.moveupright=function()
+				{
+				var position=$(cssid).offset();
+					console.log("left "+position.left);
+					console.log("top "+position.top);
+					position.left=position.left+20;
+					position.top=position.top-20;
+					$(cssid).offset(position);
+					}
+				this.movedownleft=function()
+				{
+				var position=$(cssid).offset();
+					console.log("left "+position.left);
+					console.log("top "+position.top);
+					position.left=position.left-20;
+					position.top=position.top+20;
+					$(cssid).offset(position);
+				}
+				this.movedownright=function()
+				{
+				var position=$(cssid).offset();
+					console.log("left "+position.left);
+					console.log("top "+position.top);
+					position.left=position.left+20;
+					position.top=position.top+20;
+					$(cssid).offset(position);
+					}
+		}
+		
+var redball=new Ball("#redball");
+var greenball=new Ball("#greenball");
+var blueball=new Ball("#blueball");
+var orangeball=new Ball("#orangeball");
+var blackball=new Ball("#blackball");
+var silverball=new Ball("#silverball");
+			
+</script>
+		<body>
+		<img src="red_ball03.gif" id="redball" class="ball"/>
+		<img src="green_ball.jpg" id="greenball" class="ball"/>
+		<img src="blue_ball.jpg" id="blueball" class="ball"/>
+		<img src="orange_ball.png" id="orangeball" class="ball"/>
+		<img src="black_ball.jpg" id="blackball" class="ball"/>
+		<img src="silver_ball.jpg" id="silverball" class="ball"/>
+		</body>
+	
+	</head>
+	</html>		
