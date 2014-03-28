@@ -1,0 +1,24 @@
+Insert Wall picture into Redball Midterm code
+Set values of Wall Right, Wall Left, Wall Top and Wall Bottom
+Blueball moveright 10 pixels
+Check if Ball Right is greater than Wall Left
+If Yes then stop. Go to Line 9.
+If No then keep moving right 10 pixels. Go to line 7. 
+Loop back to Line 3
+
+Set invisible stop value for Blackball to check when moving right and moving up
+Blackball move right 10 pixels
+Check if Ball Right is greater than invisible right value
+If Yes then stop and move up 10 pixels. Go to line 16
+If No then keep moving right 10 pixels. Go to line 14
+Loop back to Line 11
+
+Check if Ball Top is greater than invisible top value
+If Yes then stop and move left 10 pixels. Go to line 21.
+If no keep moving left 10 pixels. Go to Line 18
+Loop back to line 15.
+
+Check if Ball Left is greater than Wall Right. 
+If yes then stop.
+If no then keep moving left 10 pixels. Go to line 22. 
+Loop back to line 19
