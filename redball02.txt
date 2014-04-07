@@ -1,0 +1,17 @@
+<!doctype>
+<html>
+<head>
+<title>red ball part 1</title>
+<script src="http://lrn.icstars.org/redball.js"></script>
+<script>
+function sayhello()
+{
+alert ("Hello Joe");
+}
+</script>
+</head>
+<body>
+<img src="redball02.jpg" id="redball"/>
+<button onclick="sayhello();">hello world </button>
+</body>
+</html>

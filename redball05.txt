@@ -1,0 +1,14 @@
+<html>
+	<head>	
+			<style>
+			#redball {
+			position:absolute;
+			}
+			</style>
+			<script>
+			</script>
+		<body>
+		
+		</body>
+	
+	</head>
