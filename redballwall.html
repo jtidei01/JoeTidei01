@@ -55,9 +55,9 @@
 					#wall{
 					background-color:blue;
 					position:absolute;
-					width:10px;
+					width:100px;
 					height:250px;
-					left:400px;
+					left:300px;
 					top:100px;
 					}
 
@@ -105,11 +105,11 @@
 			
 						this.moveright=function()
 						{
+							var position=$(cssid).offset();
 							var hittingwall=this.checkwallhit();
 							if(hittingwall==false)
 
 						{
-							var position=$(cssid).offset();
 							console.log("left "+position.left);
 							console.log("top "+position.top);
 							position.left=position.left+20;
@@ -118,18 +118,20 @@
 
 							else
 							{
-							console.log("hit");	
+							console.log("bounce");
+							position.left=position.left-20;		
 							}
+							$(cssid).offset(position);
 						}
 
 					<!-- Move Ball Down Below -->
 
 						this.movedown=function()
 						{
+							var position=$(cssid).offset();
 							var hittingwall=this.checkwallhit();
 							if(hittingwall==false)
 							{
-							var position=$(cssid).offset();
 							console.log("top "+position.top);
 							position.top=position.top+20;
 							$(cssid).offset(position);
@@ -137,18 +139,20 @@
 
 							else
 							{
-							console.log("hit");	
+							console.log("bounce");
+							position.top=position.top-20;		
 							}
+							$(cssid).offset(position);
 						}
 
 					<!-- Move Ball Up Below -->
 
 						this.moveup=function()
 						{
+							var position=$(cssid).offset();
 							var hittingwall=this.checkwallhit();
 							if(hittingwall==false)
 							{	
-							var position=$(cssid).offset();
 							console.log("top "+position.top);
 							position.top=position.top-20;
 							$(cssid).offset(position);	
@@ -156,8 +160,10 @@
 
 							else
 							{
-							console.log("hit");	
+							console.log("bounce");
+							position.top=position.top+20;		
 							}
+							$(cssid).offset(position);
 
 						}
 
@@ -165,10 +171,10 @@
 
 						this.moveleft=function()
 						{
+							var position=$(cssid).offset();	
 							var hittingwall=this.checkwallhit();
 							if(hittingwall==false)
 							{
-							var position=$(cssid).offset();
 							console.log("left "+position.left);
 							position.left=position.left-20;
 							$(cssid).offset(position);	
@@ -176,8 +182,10 @@
 
 							else
 							{
-							console.log("hit");		
+							console.log("bounce");
+							position.left=position.left+20;		
 							}
+							$(cssid).offset(position);
 
 						}	
 
@@ -186,22 +194,45 @@
 						this.moveupleft=function()
 						{
 						var position=$(cssid).offset();
+						var hittingwall=this.checkwallhit();
+						if(hittingwall==false)
+						{
 							console.log("left "+position.left);
 							console.log("top "+position.top);
 							position.left=position.left-20;
 							position.top=position.top-20;
 							$(cssid).offset(position);
 						}
+						else
+							{
+							console.log("bounce");
+							position.left=position.left+20;
+							position.top=position.top+20;		
+							}
+							$(cssid).offset(position);
+						}
+
 
 					<!-- Move Ball Upright Below -->
 
 						this.moveupright=function()
 						{
 						var position=$(cssid).offset();
+						var hittingwall=this.checkwallhit();
+						if(hittingwall==false)
+						{
 							console.log("left "+position.left);
 							console.log("top "+position.top);
 							position.left=position.left+20;
 							position.top=position.top-20;
+							$(cssid).offset(position);
+						}
+						else
+							{
+							console.log("bounce");
+							position.left=position.left-20;
+							position.top=position.top+20;		
+							}
 							$(cssid).offset(position);
 						}
 
@@ -210,10 +241,21 @@
 						this.movedownleft=function()
 						{
 						var position=$(cssid).offset();
+						var hittingwall=this.checkwallhit();
+						if(hittingwall==false)
+						{						
 							console.log("left "+position.left);
 							console.log("top "+position.top);
 							position.left=position.left-20;
 							position.top=position.top+20;
+							
+						}
+						else
+							{
+							console.log("bounce");
+							position.left=position.left+20;
+							position.top=position.top-20;		
+							}
 							$(cssid).offset(position);
 						}
 
@@ -222,12 +264,23 @@
 						this.movedownright=function()
 						{
 						var position=$(cssid).offset();
+						var hittingwall=this.checkwallhit();
+						if(hittingwall==false)
+						{
 							console.log("left "+position.left);
 							console.log("top "+position.top);
 							position.left=position.left+20;
 							position.top=position.top+20;
 							$(cssid).offset(position);
 						}
+						else
+							{
+							console.log("bounce");
+							position.left=position.left-20;
+							position.top=position.top-20;		
+							}
+							$(cssid).offset(position);
+						}	
 				}
 
 			var blueball=new Ball("#blueball");
