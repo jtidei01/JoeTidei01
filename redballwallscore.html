@@ -6,8 +6,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 			<head>
-
-				<style>
+	<style>
 
 					#blueball{
 					position:absolute;
@@ -74,13 +73,18 @@
 					align-items:center;
 					}
 
-					#scoreboard{
+					#score{
 					background-color:yellow;
 					position:absolute;
 					width:75px;
 					height:50px;
 					left:650px;
 					top:0px;
+					font-size:30px;
+					font-weight:bold;
+					display:flex;
+					justify-content:center;
+					align-items:center;
 					}
 
 
@@ -88,11 +92,9 @@
 
 				<script>
 
-					function Ball (cssid)
-
-					<!-- add healthvalue to ball -->
+					var score=0;
 					
-					this.healthvalue=0;
+					function Ball (cssid)
 
 					<!-- Check Wall Hit Below -->
 					{
@@ -145,8 +147,10 @@
 
 							else
 							{
-							console.log("bounce");
-							position.left=position.left-20;		
+							position.left=position.left-20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}
@@ -166,8 +170,10 @@
 
 							else
 							{
-							console.log("bounce");
-							position.top=position.top-20;		
+							position.top=position.top-20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}
@@ -187,8 +193,10 @@
 
 							else
 							{
-							console.log("bounce");
-							position.top=position.top+20;		
+							position.top=position.top+20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 
@@ -209,8 +217,10 @@
 
 							else
 							{
-							console.log("bounce");
-							position.left=position.left+20;		
+							position.left=position.left+20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 
@@ -232,9 +242,11 @@
 						}
 						else
 							{
-							console.log("bounce");
 							position.left=position.left+20;
-							position.top=position.top+20;		
+							position.top=position.top+20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}
@@ -256,9 +268,11 @@
 						}
 						else
 							{
-							console.log("bounce");
 							position.left=position.left-20;
-							position.top=position.top+20;		
+							position.top=position.top+20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}
@@ -279,9 +293,11 @@
 						}
 						else
 							{
-							console.log("bounce");
 							position.left=position.left+20;
-							position.top=position.top-20;		
+							position.top=position.top-20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}
@@ -302,19 +318,24 @@
 						}
 						else
 							{
-							console.log("bounce");
 							position.left=position.left-20;
-							position.top=position.top-20;		
+							position.top=position.top-20;
+							score=score+ this.healthvalue;
+							$("#score").html(score);
+							console.log("score"+score);		
 							}
 							$(cssid).offset(position);
 						}	
 				}
 
 			var blueball=new Ball("#blueball");
+			blueball.healthvalue=10;
 			var orangeball=new Ball("#orangeball");
+			orangeball.healthvalue=5;
 			var blackball=new Ball("#blackball");
+			blackball.healthvalue=-5;
 			var silverball=new Ball("#silverball");
-			blueball.healthvalue=
+			silverball.healthvalue=-10;
 
 				</script>
 
@@ -594,10 +615,13 @@
 					<img src="black_ballrs.jpg" id="blackball" class="ball"/>
 					<img src="silver_ballrs.jpg" id="silverball" class="ball"/>
 					<div id="wall"></div>
+					
 					<div id="nutritionbar">
 					<p><strong>Score:</strong></p>
 					</div>
-					<div id="scoreboard"></div>
+					<div id="score">
+					<p><strong>0</strong></p>
+					</div>
 
 				</body>
 
